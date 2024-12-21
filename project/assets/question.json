@@ -1,0 +1,11 @@
+{
+    "text": "What is the capital of France?",
+    "options": [
+      "Berlin",
+      "Madrid",
+      "Paris",
+      "Rome"
+    ],
+    "correctAnswerIndex": 2,
+    "selectedAnswerIndex": null
+}
