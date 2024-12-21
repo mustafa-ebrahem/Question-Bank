@@ -1,11 +1,48 @@
 {
-    "text": "What is the capital of France?",
-    "options": [
-      "Berlin",
-      "Madrid",
-      "Paris",
-      "Rome"
+    "math":[{
+                "text":"What is the capital of France?",
+                "options": [
+                "Berlin",
+                "Madrid",
+                "Paris",
+                "Rome"
+                ],
+                "correctAnswerIndex": 2,
+                "selectedAnswerIndex": null
+            },
+            {
+                "text":"What is the capital of France?",
+                "options": [
+                "Berlin",
+                "Madrid",
+                "Paris",
+                "Rome"
+                ],
+                "correctAnswerIndex": 2,
+                "selectedAnswerIndex": null
+            }
     ],
-    "correctAnswerIndex": 2,
-    "selectedAnswerIndex": null
+    "Science":[{
+                "text":"What is the capital of France?",
+                "options": [
+                "Berlin",
+                "Madrid",
+                "Paris",
+                "Rome"
+                ],
+                "correctAnswerIndex": 2,
+                "selectedAnswerIndex": null
+            },
+            {
+                "text":"What is the capital of France?",
+                "options": [
+                "Berlin",
+                "Madrid",
+                "Paris",
+                "Rome"
+                ],
+                "correctAnswerIndex": 2,
+                "selectedAnswerIndex": null
+            }
+    ]
 }
