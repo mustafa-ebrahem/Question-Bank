@@ -1,8 +1,12 @@
 class Question {
   final String id;
+  
   final String subjectId;
+  
   String questionText;
+  
   List<String> options;
+  
   int correctOptionIndex;
 
   Question({

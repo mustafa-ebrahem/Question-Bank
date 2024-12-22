@@ -6,7 +6,7 @@ class SubjectsProvider with ChangeNotifier {
 
   List<Subject> get subjects => [..._subjects];
 
-  void addSubject(String name) {
+  Future<void> addSubject(String name) async {
     final subject = Subject(
       id: DateTime.now().toString(),
       name: name,
@@ -15,8 +15,19 @@ class SubjectsProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void deleteSubject(String id) {
+  Future<void> deleteSubject(String id) async {
     _subjects.removeWhere((subject) => subject.id == id);
     notifyListeners();
+  }
+
+  Future<void> updateSubject(String id, String newName) async {
+    final index = _subjects.indexWhere((subject) => subject.id == id);
+    if (index != -1) {
+      _subjects[index] = Subject(
+        id: id,
+        name: newName,
+      );
+      notifyListeners();
+    }
   }
 }

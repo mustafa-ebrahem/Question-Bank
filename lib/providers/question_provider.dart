@@ -5,10 +5,10 @@ class QuestionProvider with ChangeNotifier {
   final List<Question> _questions = [];
 
   List<Question> getQuestionsBySubject(String subjectId) {
-    return _questions.where((q) => q.subjectId == subjectId).toList();
+    return _questions.where((question) => question.subjectId == subjectId).toList();
   }
 
-  void addQuestion(String subjectId, String questionText, List<String> options, int correctOptionIndex) {
+  Future<void> addQuestion(String subjectId, String questionText, List<String> options, int correctOptionIndex) async {
     final question = Question(
       id: DateTime.now().toString(),
       subjectId: subjectId,
@@ -20,16 +20,16 @@ class QuestionProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void updateQuestion(Question question) {
+  Future<void> updateQuestion(Question question) async {
     final index = _questions.indexWhere((q) => q.id == question.id);
-    if (index >= 0) {
+    if (index != -1) {
       _questions[index] = question;
       notifyListeners();
     }
   }
 
-  void deleteQuestion(String questionId) {
-    _questions.removeWhere((q) => q.id == questionId);
+  Future<void> deleteQuestion(String questionId) async {
+    _questions.removeWhere((question) => question.id == questionId);
     notifyListeners();
   }
 }

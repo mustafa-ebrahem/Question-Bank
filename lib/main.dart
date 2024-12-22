@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'screens/home_screen.dart';
+import 'providers/subjects_provider.dart';
 import 'providers/question_provider.dart';
-import 'providers/subjects_provider.dart';  // Add this import
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => QuestionProvider()),
         ChangeNotifierProvider(create: (_) => SubjectsProvider()),
+        ChangeNotifierProvider(create: (_) => QuestionProvider()),
       ],
       child: const MyApp(),
     ),
